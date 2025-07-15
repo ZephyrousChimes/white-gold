@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'ETBembo';
+    src: url('/fonts/et-book/et-book-roman-line-figures.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'ETBembo';
+    src: url('/fonts/et-book/et-book-display-italic-old-style-figures.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+  }
+  
+  body {
+    font-family: 'ETBembo', serif;
+  }
+  

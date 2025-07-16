@@ -1,13 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { parseMDX } from '@/lib/mdx';
-import MDX from './MDX';
-
-type Props = {
-  params: {
-    slug: string;
-  };
-};
+import MDXRenderer from './MDXRenderer';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
@@ -18,16 +12,16 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function PostPage({ params }: Props) {
+export default async function PostPage({ params }: { params: Promise<{ slug: string }>}) {
   const { slug } = await params;
   const filePath = path.join(postsDirectory, `${slug}.mdx`);
   const fileContent = fs.readFileSync(filePath, 'utf8');
 
-  const mdxSource = await parseMDX(fileContent);
+  const { mdxSource } = await parseMDX(fileContent);
 
   return (
     <article>
-      <MDX mdxSource={mdxSource} />
+      <MDXRenderer mdxSource={mdxSource} />
     </article>
   );
 }

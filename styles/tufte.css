@@ -45,7 +45,7 @@ html {
 }
 
 body {
-    width: 87.5%;
+    width: 87.5lvw;
     margin-left: auto;
     margin-right: auto;
     padding-left: 12.5%;
@@ -243,8 +243,9 @@ img {
 .marginnote {
     float: right;
     clear: right;
-    margin-right: -60%;
-    width: 50%;
+    /* margin-right: max(-60%, -5rem); */
+    /* width: 50%; */
+    max-width: 15rem;
     margin-top: 0.3rem;
     margin-bottom: 0;
     font-size: 1.1rem;
@@ -432,7 +433,7 @@ label.margin-toggle:not(.sidenote-number) {
         clear: both;
         width: 95%;
         margin: 1rem 2.5%;
-        vertical-align: baseline;
+        /* vertical-align: baseline; */
         position: relative;
     }
 

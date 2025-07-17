@@ -3,7 +3,7 @@ import MDXRenderer from 'components/MDXRenderer';
 import { getSerializedMdxForSlug } from '@/lib/mdxUtils';
 
 export default async function CpuInspectorPage() {
-  const { mdxSource } = await getSerializedMdxForSlug('cpu-inspector');
+  const { mdxSource } = await getSerializedMdxForSlug('cpu-architecture-performance-engineering');
 
   return (
     <div className="cpu-inspector">

@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { parseMDX } from '@/lib/mdx';
+import { parseMDX } from '@/lib/mdxParser';
 import Link from 'next/link';
 
 type PostMetadata = {

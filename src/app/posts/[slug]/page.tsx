@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
-import { parseMDX } from '@/lib/mdx';
-import MDXRenderer from './MDXRenderer';
+import { parseMDX } from '@/lib/mdxParser';
+import MDXRenderer from 'components/MDXRenderer';
 
 const postsDirectory = path.join(process.cwd(), 'posts');
 
